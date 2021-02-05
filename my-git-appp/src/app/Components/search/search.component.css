@@ -1,0 +1,14 @@
+
+.example-card {
+    width: 90%;
+    max-width: 300px;
+    margin: 4px
+}
+    
+    /* mat-card-subtitle{
+    font-size:40px
+    }
+    
+    mat-card-title{
+    font-size:30px
+    } */

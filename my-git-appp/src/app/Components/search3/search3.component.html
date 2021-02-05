@@ -1,0 +1,25 @@
+<div style="text-align:center;">
+    <mat-form-field>
+        <mat-label>Repository Name</mat-label>
+        <input autocomplete="off" type=text (input)="onSearch($event.target.value)"matInput placeholder="Search">
+    </mat-form-field>
+</div>
+<mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let item of gitRepoList;">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <img mat-card-avatar alt="" src='{{item?.owner?.avatar_url}}'>
+                <mat-card-title>{{item?.name}}</mat-card-title>
+                <mat-card-subtitle>
+                    {{item?.owner?.login}}
+                </mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+                <p>
+                    {{item?.description}}
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
